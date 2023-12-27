@@ -2,7 +2,9 @@ const express = require('express');
 const { User } = require('./db/user.model');
 const app = express();
 const jwt = require('jsonwebtoken');
-const jwtPass = 'pass321';
+require('dotenv').config()
+const jwtPass = process.env.JWT_TOKEN;
+
 
 app.use(express.json())
 
